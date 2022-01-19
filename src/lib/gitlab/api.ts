@@ -12,7 +12,6 @@ export const gitlabApi = async (cachedOnly = false, cachedRetry = true) => {
   }
 
   const authData = await aha.auth('gitlab', options);
-  console.log('~~~~~~~~~~', authData.token);
 
   return new GraphQLClient('https://gitlab.com/api/graphql', {
     headers: {
